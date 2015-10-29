@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1/strict"><head><!-- base href="http://correttore.olimpiadi-informatica.it/AoltevWeb/testImage/352/" --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ritrovo a Brambillia</title></head><body><h4>Selezioni regionali 2006</h4><h1>Ritrovo a Brambillia
+	(<samp>brambillia</samp>)</h1><h2>
+  Difficoltà D = 2.
+  </h2><h3>Descrizione del problema</h3><p>
+Nell'isola di Brambillia, vi sono <var>N</var> città numerate
+da 1 a <var>N</var> e collegate attraverso una ferrovia circolare, le
+cui tratte sono anch'esse numerate da 1 a <var>N</var> e possono
+essere percorse in entrambe le direzioni: la tratta ferroviaria
+<var>j</var> collega direttamente la città <var>j</var> alla
+città <var>j</var>+1 (e, percorsa nella direzione opposta,
+collega <var>j</var>+1 a <var>j</var>) dove <var>j</var> = 1, 2, ...,
+<var>N</var>-1; la tratta <var>N</var> collega la città
+<var>N</var> alla città 1 (e, percorsa nella direzione opposta,
+collega 1 a <var>N</var>).  Il biglietto ferroviario per ciascuna
+tratta ha un costo prestabilito.
+</p><p>
+Date due qualunque città <var>p</var> e <var>q</var>, è possibile
+andare da <var>p</var> a <var>q</var> attraverso due percorsi
+ferroviari alternativi (ipotizzando che <var>1 ≤ p &lt;
+q ≤ N</var>, un percorso attraversa le tratte
+<var>p</var>, <var>p</var>+1, ..., <var>q</var>-1 mentre l'altro
+attraversa, nella direzione opposta, le tratte <var>p</var>-1,
+<var>p</var>-2, ..., 1, <var>N</var>, <var>N</var>-1, ...,
+<var>q</var>; per andare da <var>q</var> a <var>p</var>, attraversiamo
+tali percorsi ma in direzione opposta). Il biglietto ferroviario per
+ciascuno dei percorsi ha un costo pari alla somma dei costi delle
+singole tratte che lo compongono.
+</p><p>
+Gli abitanti di Brambillia intendono utilizzare la ferrovia circolare
+per ritrovarsi in occasione della sagra annuale dell'isola e devono
+scegliere la città presso cui organizzare tale sagra
+minimizzando il costo totale dei biglietti. Per
+questo motivo hanno contato, per ogni città, quante persone
+vogliono parteciparvi, visto che è necessario acquistare un
+biglietto ferroviario per persona al costo descritto sopra
+(per gli abitanti della città che verrà
+scelta, il costo sarà nullo perché non dovranno prendere
+il treno).  In base a tale conteggio, individuate la città in
+cui organizzare la sagra, tenendo presente che le persone possono
+giungervi attraverso uno dei due percorsi a loro disposizione nella
+ferrovia circolare.
+</p><h3>Dati di input</h3><p>Il file <samp>input.txt</samp> è composto da 2<var>N</var>+1
+righe.
+</p><p>La prima riga contiene un intero positivo che rappresenta il numero
+<var>N</var> delle città.
+</p><p>
+Le successive <var>N</var> righe contengono ciascuna un intero positivo:
+quello nella <var>j</var>-esima di tali righe rappresenta il costo
+del biglietto ferroviario per la tratta <var>j</var>, dove <var>1 ≤
+j ≤ N</var>.
+</p><p>
+Le ulteriori <var>N</var> righe contengono ciascuna un intero positivo o
+nullo: quello nella <var>j</var>-esima di tali righe è il
+numero delle persone della città <var>j</var> che intendono
+partecipare alla sagra, per 1 &lt;= <var>j</var> &lt;= <var>N</var>.
+</p><h3>Dati di output</h3><p>
+Il file <samp>output.txt</samp> è composto da una riga
+contenente un solo intero <var>j</var> che rappresenta la città
+<var>j</var> presso cui organizzare la sagra. Come osservato in
+precedenza, tale città rende minimo il costo totale, ottenuto
+sommando i costi dei biglietti ferroviari di tutti i partecipanti.
+</p><h3>Assunzioni</h3><ul><li> <var>1 &lt; N &lt; 100</var></li><li> I dati in <samp>input.txt</samp>  garantiscono che la soluzione
+è unica (esiste una sola città in cui organizzare 
+la sagra).</li></ul><h3>Esempi di input/output</h3><p></p><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>4
+45
+34
+18
+40
+3
+0
+4
+2
+</pre></td><td style="padding: 1em" valign="top"><pre>4
+</pre></td></tr></tbody></table><br><br><h3>Nota/e</h3><ul><li>Un programma che restituisce sempre lo stesso valore,
+indipendentemente dai dati in <samp>input.txt</samp>, non totalizza
+alcun punteggio rilevante.</li><li>Attenzione se usate la piattaforma di sviluppo software basata sul
+compilatore Turbo Pascal e sul sistema operativo Windows: visto che i
+vostri programmi potrebbero essere valutati in una piattaforma diversa
+dalla vostra, avete garanzia di uniformità di comportamenti
+soltanto se utilizzate <em>sempre</em> il tipo <samp>LongInt</samp> al
+posto del tipo <samp>Integer</samp> (quest'ultimo permette di
+rappresentare gli interi nell'intervallo [-32768...32767]
+mentre <samp>LongInt</samp> ne permette la rappresentazione in
+[-2147483648...2147483647]).</li></ul>
+</body></html>

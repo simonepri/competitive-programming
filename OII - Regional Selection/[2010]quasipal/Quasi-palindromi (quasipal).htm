@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1/strict"><head><!-- base href="http://correttore.olimpiadi-informatica.it/AoltevWeb/testImage/369/" --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Quasi-palindromi</title></head><body><h4>Selezioni territoriali 2010</h4><h1>Quasi-palindromi
+	(<samp>quasipal</samp>)</h1><h2>
+  Difficoltà D = 1.
+  </h2><h3>Descrizione del problema</h3><p> 
+Un numero palindromo è un numero che letto da destra a sinistra o da
+sinistra a destra produce la stessa sequenza di cifre. Un numero 
+<var>N</var> è
+<strong>quasi-palindromo</strong> se è palindromo oppure è tale che
+sostituendo alcune delle cifre 0 presenti in <var>N</var> con altre
+cifre diverse da 0 si
+ottiene un numero <var>N'</var> che è palindromo. Ad esempio <var>N =
+4504</var> è quasi-palindromo perché sostituendo 0 con 5 si ottiene il
+numero <var>N’ = 4554</var> che è palindromo.
+</p><p>
+Un insieme di <var>M</var> numeri con lo stesso numero di cifre
+forma un rettangolo quasi-palindromo (le cui righe sono i numeri) se
+le cifre nella stessa colonna formano sempre un numero quasi-palindromo. Ad
+esempio 120, 046 e 123 formano un rettangolo quasi-palindromo (notare
+che alcuni numeri possono iniziare con lo zero). È sufficiente porli
+nelle righe come segue, per verificarlo colonna per colonna:<br><br>
+<samp>120</samp><br><br>
+<samp>046</samp><br><br>
+<samp>123</samp><br><br>
+Infatti, la cifra 0 in 120 va sostituita con 3 per ottenere un palindromo sulla terza colonna.
+</p><p>
+Scrivere un programma che dati <var>M</var> numeri di <var>N</var>
+cifre ciascuno, li stampi in ordine
+(uno per riga) in modo tale che formino un rettangolo quasi-palindromo.
+</p><h3>Dati di input</h3><p>
+Il file <samp>input.txt</samp> è composto da <var>M+1</var> righe.  La prima
+riga contiene due  interi positivi <var>M</var> e <var>N</var>
+separati da uno spazio. Ciascuna delle successive <var>M</var> righe contiene una sequenza di
+<var>N</var> cifre decimali consecutive (senza separazione di spazi),
+che rappresenta uno degli <var>M</var> numeri. 
+</p><h3>Dati di output</h3><p>
+Il file <samp>output.txt</samp> è composto da <var>M</var> righe
+contenenti gli <var>M</var> numeri in ingresso ordinati in modo
+da formare un rettangolo quasi-palindromo.
+</p><h3>Assunzioni</h3><ul><li> 2 ≤ <var>N, M</var> ≤ 8.</li><li> Viene garantito che esiste sempre una soluzione.</li><li> Alcuni numeri possono iniziare con una o più cifre 0.</li></ul><h3>Esempi di input/output</h3><p></p><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>3 3 
+046
+120
+123 
+</pre></td><td style="padding: 1em" valign="top"><pre>120
+046
+123 
+</pre></td></tr></tbody></table><br><br><h3>Nota/e</h3><ul><li>In generale, più soluzioni possono soddisfare i requisti del
+problema: è sufficiente fornirne una soltanto.</li><li>Un programma che restituisce sempre lo stesso valore,
+indipendentemente dai dati in <samp>input.txt</samp>, non totalizza
+alcun punteggio.</li></ul>
+</body></html>

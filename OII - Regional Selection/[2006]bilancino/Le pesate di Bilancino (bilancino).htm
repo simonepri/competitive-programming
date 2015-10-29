@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1/strict"><head><!-- base href="http://correttore.olimpiadi-informatica.it/AoltevWeb/testImage/351/" --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Le pesate di Bilancino</title></head><body><h4>Selezioni regionali 2006</h4><h1>Le pesate di Bilancino
+	(<samp>bilancino</samp>)</h1><h2>
+  Difficoltà D = 3.
+  </h2><h3>Descrizione del problema</h3><p> Bilancino è un bambino con una passione maniacale, quella
+di mettere gli oggetti in ordine crescente di peso. I suoi genitori
+posseggono un'antica e rara bilancia con due bracci uguali: posti due
+oggetti, uno per braccio, la bilancia permette di stabilire quale dei
+due oggetti è più pesante, ma non permette di trovarne
+il peso assoluto.
+</p><p>
+Oggi Bilancino vuole mettere in ordine crescente di peso 
+<var>N</var> oggetti e, a tale scopo, ha già effettuato una
+serie di <var>M</var> pesate,
+trascrivendone i risultati. Infatti, numerati tali oggetti
+da 1 a <var>N</var>, egli ha pesato <var>M</var> coppie di oggetti
+distinti <var>x</var> e <var>y</var>, dove <var>1 ≤ x</var>,
+<var>y ≤ N</var>, scrivendo i due interi <var>x</var> e
+<var>y</var> in quest'ordine su una riga per indicare che <var>x</var>
+è più leggero di <var>y</var> e, invece, scrivendo
+<var>y</var> e <var>x</var> in quest'ordine per indicare che
+<var>y</var> è più leggero di <var>x</var>.  Da notare
+che non esistono due oggetti con lo stesso peso (siano essi stati
+pesati o meno da Bilancino) e che la stessa coppia di oggetti non
+può essere pesata più di una volta.
+</p><p>
+Esaminate le <var>M</var> pesate finora eseguite da Bilancino e
+aiutatelo a decidere quale, tra le seguenti alternative, consente di
+stabilire l'ordine crescente di peso tra gli <var>N</var> oggetti:
+</p><ul>
+<li>le <var>M</var> pesate sono sufficienti;</li>
+<li>è necessaria un'ulteriore pesata;</li>
+<li>sono necessarie due o più pesate.</li>
+</ul>
+<p></p><h3>Dati di input</h3><p>Il file <samp>input.txt</samp> è composto da <var>M+1</var>
+righe.
+</p><p>La prima riga contiene due interi positivi separati da uno spazio:
+il primo intero rappresenta il numero <var>N</var> di oggetti da
+ordinare in base al peso mentre il secondo intero rappresenta il
+numero <var>M</var> di pesate effettuate da Bilancino.
+</p><p>
+Le successive <var>M</var> righe contengono coppie di interi positivi: la
+<var>j</var>-esima di tali righe è composta da due interi
+distinti <var>a</var> e <var>b</var> separati da uno spazio, a
+rappresentare la <var>j</var>-esima pesata effettuata da Bilancino, in
+cui egli scopre che l'oggetto <var>a</var> è più leggero
+dell'oggetto <var>b</var> (dove <var>1 ≤ j ≤ M</var> e <var>1
+≤ a, b ≤N</var>). Da notare che la stessa pesata non può
+apparire in più di una riga.
+</p><h3>Dati di output</h3><p>
+Il file <samp>output.txt</samp> è composto da una riga
+contenente un solo intero come dalla seguente tabella.<br><br> 
+0 : nessuna ulteriore pesata è necessaria per stabilire
+l'ordine crescente di tutti gli oggetti.<br><br> 
+1 : serve e basta un'ulteriore pesata per stabilire l'ordine 
+crescente di tutti gli oggetti.<br><br> 
+2 : due o più pesate sono ulteriormente necessarie per stabilire
+l'ordine crescente di tutti gli oggetti.<br><br>
+</p><h3>Assunzioni</h3><ul><li> <var>1 &lt; N &lt; 100</var></li><li> <var>1 ≤ M ≤ N(N-1)/2</var></li><li> I dati in <samp>input.txt</samp> garantiscono sempre che esiste
+almeno un ordinamento degli oggetti compatibile con tutte le pesate
+trascritte da Bilancino.</li></ul><h3>Esempi di input/output</h3><p></p><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>3 2
+1 2
+3 1
+</pre></td><td style="padding: 1em" valign="top"><pre>0
+</pre></td></tr></tbody></table><br><br><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>4 4
+2 3
+1 4
+1 3
+2 1
+</pre></td><td style="padding: 1em" valign="top"><pre>1
+</pre></td></tr></tbody></table><br><br><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>4 3
+2 3
+1 4
+2 1
+</pre></td><td style="padding: 1em" valign="top"><pre>2
+</pre></td></tr></tbody></table><br><br><h3>Nota/e</h3><ul><li>Un programma che restituisce sempre lo stesso valore,
+indipendentemente dai dati in <samp>input.txt</samp>, non totalizza
+alcun punteggio rilevante.</li><li>Attenzione se usate la piattaforma di sviluppo software basata sul
+compilatore Turbo Pascal e sul sistema operativo Windows: visto che i
+vostri programmi potrebbero essere valutati in una piattaforma diversa
+dalla vostra, avete garanzia di uniformità di comportamenti
+soltanto se utilizzate <em>sempre</em> il tipo <samp>LongInt</samp> al
+posto del tipo <samp>Integer</samp> (quest'ultimo permette di
+rappresentare gli interi nell'intervallo [-32768...32767]
+mentre <samp>LongInt</samp> ne permette la rappresentazione in
+[-2147483648...2147483647]).</li></ul>
+</body></html>

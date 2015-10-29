@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1/strict"><head><!-- base href="http://correttore.olimpiadi-informatica.it/AoltevWeb/testImage/363/" --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Teste di serie</title></head><body><h4>Selezioni regionali 2006</h4><h1>Teste di serie
+	(<samp>serie</samp>)</h1><h2>
+  Difficoltà D = 2.
+  </h2><h3>Descrizione del problema</h3><p>Un torneo è composto da <var>K</var> gironi, con
+<var>N</var> squadre partecipanti in ciascun girone (per un totale di
+<var>K</var>x<var>N</var> squadre nel torneo). Dopo le eliminatorie,
+passa soltanto la prima classificata di ogni girone.
+</p><p>
+A ogni squadra è associato un "coefficiente di bravura", ovvero
+un intero positivo che è tanto maggiore quanto più la squadra
+è forte. Per rendere più vivace il torneo, gli
+organizzatori vogliono far gareggiare le squadre più forti tra
+loro soltanto dopo le eliminatorie: in altre parole, le <var>K</var>
+squadre con i coefficienti di bravura più alti devono giocare
+in gironi distinti.
+</p><p>
+Aiutate gli organizzatori a verificare che la composizione del torneo
+rispetti il loro volere: prese le <var>K</var> squadre con il
+più alto coefficiente di bravura, ciascun girone deve contenere
+esattamente una di esse (da notare che due o più squadre
+possono avere lo stesso coefficiente).
+</p><h3>Dati di input</h3><p>
+Il file <samp>input.txt</samp> è composto da <var>K+1</var>
+righe.
+</p><p>
+La prima riga contiene due interi positivi separati da uno spazio: il
+numero <var>K</var> di gironi e il numero <var>N</var> di squadre per
+girone.
+</p><p>
+Le successive <var>K</var> righe contengono i coefficienti di bravura
+delle squadre: la <var>j</var>-esima di tale righe contiene
+<var>N</var> interi positivi separati da uno spazio che sono i
+coefficienti di bravura delle <var>N</var> squadre nel
+<var>j</var>-esimo girone, per <var>1 ≤ j ≤
+K</var>.
+</p><h3>Dati di output</h3><p>
+Il file <samp>output.txt</samp> è composto di una riga
+contenente un solo intero: 1 se il torneo rispetta i vincoli imposti
+dagli organizzatori, 0 altrimenti.
+</p><h3>Assunzioni</h3><ul><li> <var>1 &lt; N ≤ 100</var></li><li> <var>1 &lt; K ≤ 100</var></li></ul><h3>Esempi di input/output</h3><p></p><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>3 4
+3 5 7 9 
+3 6 78 90 
+43 78 71 32
+</pre></td><td style="padding: 1em" valign="top"><pre>0
+</pre></td></tr></tbody></table><br><br><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>3 4
+2 2 2 1 
+2 1 3 1 
+2 4 2 1
+</pre></td><td style="padding: 1em" valign="top"><pre>1
+</pre></td></tr></tbody></table><br><br><h3>Nota/e</h3><ul><li>Un programma che restituisce sempre lo stesso valore,
+indipendentemente dai dati in <samp>input.txt</samp>, non totalizza
+alcun punteggio rilevante.</li><li>Attenzione se usate la piattaforma di sviluppo software basata sul
+compilatore Turbo Pascal e sul sistema operativo Windows: visto che i
+vostri programmi potrebbero essere valutati in una piattaforma diversa
+dalla vostra, avete garanzia di uniformità di comportamenti
+soltanto se utilizzate <em>sempre</em> il tipo <samp>LongInt</samp> al
+posto del tipo <samp>Integer</samp> (quest'ultimo permette di
+rappresentare gli interi nell'intervallo [-32768...32767]
+mentre <samp>LongInt</samp> ne permette la rappresentazione in
+[-2147483648...2147483647]).</li></ul>
+</body></html>

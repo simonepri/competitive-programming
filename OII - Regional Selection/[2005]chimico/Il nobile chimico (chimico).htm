@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1/strict"><head><!-- base href="http://correttore.olimpiadi-informatica.it/AoltevWeb/testImage/353/" --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Il nobile chimico</title></head><body><h4>Selezioni regionali 2005</h4><h1>Il nobile chimico
+	(<samp>chimico</samp>)</h1><h2>
+  Difficoltà D = 2.
+  </h2><h3>Descrizione del problema</h3><p>
+Il nobile chimico Alfredo produce nel suo laboratorio due sostanze
+liquide potenzialmente inquinanti: l'<em>Aminozalina</em> e il
+<em>Brinofulo</em>. A fine giornata le deve smaltire in appositi
+contenitori, dislocati lungo il tragitto che parte dal laboratorio e
+arriva alla sua abitazione.
+</p><p> 
+Per limitare le possibilità d'inquinamento, Alfredo deve
+distribuire l'Aminozalina nel <em>maggior</em> numero possibile di
+contenitori mentre deve dividere il Brinofulo nel <em>minor</em>
+numero possibile di contenitori.  Tuttavia Aminozalina e Brinofulo
+<em>non</em> possono essere assolutamente mescolati nel medesimo
+contenitore, altrimenti la loro miscela esplode.
+</p><p>
+Ogni volta che raggiunge un contenitore per lo smaltimento dei
+liquidi, Alfredo deve eseguire una sola delle tre seguenti azioni:
+</p><ol>
+  <li>versare Aminozalina fino al riempimento del contenitore;</li>
+  <li>versare Brinofulo fino al riempimento del contenitore;</li>
+  <li>non versare nulla nel contenitore.</li>
+</ol><p>
+Data la quantità <var>A</var> di litri di Aminozalina e la
+quantità <var>B</var> di litri di Brinofulo da smaltire, e
+conoscendo l'elenco degli <var>N</var> contenitori (con rispettiva
+capacità) nell'ordine secondo cui sono incontrati lungo il
+tragitto dal laboratorio alla sua abitazione, Alfredo deve decidere se
+e quale sostanza versare in ciascun contenitore.  
+</p><h3>Dati di input</h3><p>
+Il file <samp>input.txt</samp> contiene nella prima riga gli interi
+<var>A</var> e <var>B</var> (rispettivamente i litri di Aminozalina e
+di Brinofulo da smaltire) e il numero <var>N</var> di contenitori
+disponibili.  Tali valori sono separati da uno spazio.
+</p><p>
+Nelle successive <var>N</var> righe (usando una riga per ogni
+contenitore) è contenuto un numero per riga: tali numeri
+rappresentano le capacità dei singoli contenitori elencati
+nell'ordine in cui vengono incontrati da Alfredo.
+</p><h3>Dati di output</h3><p>
+Il file <samp>output.txt</samp> deve contenere <var>N</var> righe, una
+per ogni contenitore. Ogni riga contiene due numeri separati da uno
+spazio, rispettivamente il numero di litri di Aminozalina e di
+Brinofulo smaltiti nel corrispondente contenitore. Si noti che ogni
+riga deve contenere uno zero nei casi 1 e 2 descritti sopra, e
+due zeri nel caso 3.
+</p><h3>Assunzioni</h3><ul><li> <var>1 &lt; A, B &lt; 10000</var></li><li> <var>1 &lt; N &lt; 100</var></li><li> Le singole capacità dei contenitori sono degli interi
+positivi di valore inferiore a 10000.</li><li> Le capacità dei contenitori sono sicuramente
+sufficienti per smaltire tutta l'Aminozalina e il Brinofulo
+prodotti.</li><li> I dati in input garantiscono l'esistenza di una (e una sola)
+soluzione ottima, quindi Alfredo ha un unico modo ottimo per smaltire
+le sostanze.
+</li><li>La soluzione ottima prevede che tutti i contenitori utilizzati
+vengano riempiti completamente (non puo' succedere che l'Aminozalina o
+il Brinofulo terminino prima che i contenitori effettivamente usati
+per lo smaltimento siano tutti completamente riempiti).
+</li></ul><h3>Esempi di input/output</h3><p></p><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>20 25 7
+1
+13 
+4  
+5  
+8  
+2  
+12 
+</pre></td><td style="padding: 1em" valign="top"><pre>1 0
+0 13
+4 0
+5 0
+8 0
+2 0
+0 12
+</pre></td></tr></tbody></table><br><br><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>70 3000 5
+100
+1000
+50
+2000
+20
+</pre></td><td style="padding: 1em" valign="top"><pre>0 0
+0 1000
+50 0
+0 2000
+20 0
+</pre></td></tr></tbody></table><br><br>
+</body></html>
