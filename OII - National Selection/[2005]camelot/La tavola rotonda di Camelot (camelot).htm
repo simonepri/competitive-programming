@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1/strict"><head><!-- base href="http://correttore.olimpiadi-informatica.it/AoltevWeb/testImage/334/" --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>La tavola rotonda di Camelot</title></head><body><h4>Selezioni nazionali 2005</h4><h1>La tavola rotonda di Camelot
+	(<samp>camelot</samp>)</h1><h2>
+  Difficoltà D = 3 (tempo limite 10 sec).
+  </h2><h3>Descrizione del problema</h3><p>
+A Camelot, nel periodo di maggior splendore, ogni amicizia è
+corrisposta. Ogni cavaliere è amico di oltre la metà
+dei suoi compagni d'arme, ossia, se <var>N</var> è il numero
+dei cavalieri, ciascuno di essi può contare su almeno
+<var>N/2</var> validi amici.
+</p><p>
+La tavola rotonda è disposta in un enorme salone, circondata da
+<var>N</var> sedie, con una sedia per cavaliere. Com'è
+facilmente immaginabile, ogni cavaliere pretende di avere amici ai
+suoi due lati, altrimenti rifiuta di sedersi al tavolo.
+</p><p>
+Tutti contano su Mago Merlino per disporre i cavalieri intorno al
+tavolo nella soddisfazione generale di tutti. Ma il poverino ha perso
+la formula magica per ottenere ciò in men che non si dica!
+</p><p>
+Aiuta Merlino, nei limiti delle tue possibilità, a disporre i
+cavalieri intorno al tavolo in modo che ogni cavaliere abbia degli
+amici ai suoi lati.
+</p><h3>Dati di input</h3><p>
+Il file <samp>input.txt</samp> contiene nella prima riga l'intero
+<var>N</var>, il numero dei cavalieri della tavola rotonda. I
+cavalieri sono numerati da 1 a <var>N</var>.
+</p><p>
+Ognuna delle successive <var>N</var> righe contiene una sequenza di
+<var>N</var> valori 0 oppure 1, separati da uno spazio.  La sequenza
+contenuta nell'<var>i</var>-esima di tali righe rappresenta le
+relazioni di amicizia del cavaliere numero <var>i</var>. In
+particolare, il <var>j</var>-esimo valore in tale riga 
+indica se i cavalieri <var>i</var> e <var>j</var> sono amici (valore =
+1) o meno (valore = 0). 
+</p><p>
+Poiché l'amicizia è sempre corrisposta, se il cavaliere
+<var>i</var> è amico del cavaliere <var>j</var> allora il
+cavaliere <var>j</var> è amico del cavaliere <var>i</var>.
+</p><h3>Dati di output</h3><p>
+Il file <samp>output.txt</samp> deve contenere una sola riga
+contenente una sequenza di <var>N</var> numeri separati da uno spazio,
+per rappresentare la disposizione dei cavalieri attorno alla tavola
+rotonda.  Il primo numero è sempre 1, a rappresentare il
+cavaliere numero 1. Il resto della sequenza è una permutazione
+dei numeri 2, 3, ..., <var>N</var> (cioè una disposizione in un qualche
+ordine, senza ripetizioni).  Per ogni coppia <var>i</var> e
+<var>j</var> di numeri adiacenti nell'intera sequenza, i cavalieri
+<var>i</var> e <var>j</var> devono essere amici. Inoltre, il cavaliere
+alla fine della sequenza deve essere amico del cavaliere numero 1,
+in quanto vicini di posto.
+</p><h3>Assunzioni</h3><ul><li><var> 1 &lt; N &lt; 4000</var></li></ul><h3>Valutazione delle soluzioni</h3><p></p><ul><li>Non è richiesto di soddisfare le richieste di tutti
+i cavalieri (anche se ciò è sempre possibile).</li><li>Il punteggio è quindi a scalare in base al numero di coppie
+di cavalieri che sono scontenti perché sono vicini di posto
+pur non essendo amici.</li><li> 3 punti se tutti i cavalieri sono soddisfatti (nessuna coppia
+scontenta).</li><li> 2 punti se una sola coppia è scontenta.</li><li> 1 punto se il numero delle coppie scontente è compreso tra
+2 e 10.</li><li> 0 punti altrimenti (il numero di coppie scontente è
+superiore a 10).</li></ul><h3>Esempi di input/output</h3><p></p><table border="1"><tbody><tr><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>input.txt</samp></td><td style="padding-left: 1em; padding-right: 1em; text-align: center">File <samp>output.txt</samp></td></tr><tr><td style="padding: 1em" valign="top"><pre>5
+0 1 1 0 1
+1 0 0 1 1
+1 0 0 1 1
+0 1 1 0 1
+1 1 1 1 0
+</pre></td><td style="padding: 1em" valign="top"><pre>1 3 4 2 5
+</pre></td></tr></tbody></table><br><br>
+</body></html>
