@@ -1,7 +1,7 @@
  /**
  * Competitive Programming - Collection of solved problems.
  *
- * @copyright     Copyright (c) 2014, Simone Primarosa,(http://simoneprimarosa.com)
+ * @author        Simone Primarosa,(http://simoneprimarosa.com)
  * @link          (https://github.com/simonepri/competitive-programming)
  * @license       MIT License (https://opensource.org/licenses/MIT)
  */
