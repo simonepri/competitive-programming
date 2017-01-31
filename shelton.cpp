@@ -27,7 +27,7 @@ using namespace std;
 #define FILE_OUTPUT "output.txt"
 
 int main() {
-  sync_with_stdio(false); // faster I/O
+  ios_base::sync_with_stdio(false); // faster I/O
 	ifstream in(FILE_INPUT);
 	ofstream out(FILE_OUTPUT);
 	
