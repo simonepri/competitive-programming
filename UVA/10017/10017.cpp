@@ -80,6 +80,7 @@ int main() {
   ios_base::sync_with_stdio(false); // faster I/O
   int n, m, count = 1;
   vector<int> H[3];
+  
   while(true) {
     cin >> n >> m;
     if(!n && !m) return 0;
