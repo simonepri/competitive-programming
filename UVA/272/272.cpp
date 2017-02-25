@@ -22,5 +22,5 @@ int main() {
     }
     else printf("%c", c);
   }
-	return 0;
+return 0;
 }

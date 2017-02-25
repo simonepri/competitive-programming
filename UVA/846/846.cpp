@@ -36,6 +36,6 @@ int main() {
     
     cout << steps << endl;
   }
-	
-	return 0;
+
+return 0;
 }

@@ -50,5 +50,5 @@ int main() {
     }
     cout << ((N - *it + 1) % N + 1) << endl;
   }
-	return 0;
+return 0;
 }

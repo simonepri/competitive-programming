@@ -94,5 +94,5 @@ int main() {
       printState(H);
     }
   }
-	return 0;
+return 0;
 }
