@@ -1,4 +1,4 @@
- /**
+/**
  * Competitive Programming - Collection of solved problems.
  *
  * @author        Simone Primarosa,(http://simoneprimarosa.com)
@@ -8,19 +8,10 @@
  
 #include <stdio.h>
 
-#define FILE_INPUT "input.txt"
-#define FILE_OUTPUT "output.txt"
-
 int main() {
-	FILE *in,*out;
-	in = fopen(FILE_INPUT,"r");
-	out = fopen(FILE_OUTPUT,"w");
-	if(!in || !out) return 1;
-	
-  //fscanf(in,"%d", &N);
-	//fprintf(out,"%d", N);
-	
-	fclose(in);
-	fclose(out);
-	return 0;
+  
+  //scanf(in,"%d", &N);
+  //printf(out,"%d", N);
+  
+  return 0;
 }

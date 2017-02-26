@@ -1,4 +1,4 @@
- /**
+/**
  * Competitive Programming - Collection of solved problems.
  *
  * @author        Simone Primarosa,(http://simoneprimarosa.com)
@@ -28,15 +28,14 @@ using namespace std;
 
 int main() {
   ios_base::sync_with_stdio(false); // faster I/O
-	ifstream in(FILE_INPUT);
-	ofstream out(FILE_OUTPUT);
-	
-	if(!in || !out) return 1;
+  ifstream in(FILE_INPUT);
+  ofstream out(FILE_OUTPUT);
+  if(!in || !out) return 1;
   
   //in >> N;
   //out << N;
-	
-	in.close();
-	out.close();
-	return 0;
+  
+  in.close();
+  out.close();
+  return 0;
 }
