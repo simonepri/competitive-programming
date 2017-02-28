@@ -77,6 +77,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# Input/Output files
-*.txt
