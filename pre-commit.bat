@@ -1,2 +1,1 @@
-del / *.txt
-exit
+del ./ *.txt
