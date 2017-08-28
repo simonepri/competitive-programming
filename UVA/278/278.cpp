@@ -47,9 +47,11 @@ int main() {
         if (m >= 3) {
           cout << ceil(M * m / 2.0) << endl;
         } else if (m == 2) {
-          cout << M + (4 - M % 4);
+          int r = M % 4;
+          if (r == 3) r = 1;
+          cout << M + r << endl;
         } else {
-          cout << M;
+          cout << M << endl;
         }
         break;
       }
