@@ -11,7 +11,7 @@
 using namespace std;
 
 int C[100][100] = {};
-int offsets[8][2] = {{-1, 0}, {-1, 1}, {0, 1}, {1, 1}, {1, 0}, {1, -1}, {-1, -1}, {0, -1}};
+int offsets[8][2] = {{0, -1}, {0, 1}, {-1, -1}, {-1, 0}, {-1, 1}, {1, -1}, {1, 0}, {1, 1}};
 
 int main() {
   ios_base::sync_with_stdio(false); // faster I/O
@@ -30,7 +30,10 @@ int main() {
         for (int k = 0; k < 8; k++) {
           int *off = offsets[k];
           int I = i + off[0];
-          if (I < 0 || I >= n) continue;
+          if (I < 0 || I >= n) {
+            k += 2;
+            continue;
+          }
           int J = j + off[1];
           if (J < 0 || J >= m) continue;
           if (C[I][J] == -1) continue;
