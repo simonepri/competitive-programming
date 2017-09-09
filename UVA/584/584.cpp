@@ -20,9 +20,9 @@ inline void useBonus(int &pins, int &bonus) {
   }
 }
 
-inline void addScore(char* shot, int &frame, bool &half, int &bonus, int &score) {
+inline void addScore(string &game, int &roll, int &frame, bool &half, int &bonus, int &score) {
   int pins;
-  switch (*shot) {
+  switch (game[roll]) {
     case 'X': {
       pins = 10;
       useBonus(pins, bonus);
@@ -33,7 +33,7 @@ inline void addScore(char* shot, int &frame, bool &half, int &bonus, int &score)
       break;
     }
     case '/': {
-      pins = 10 - (*(shot - 2) - '0');
+      pins = 10 - (game[roll - 2] - '0');
       useBonus(pins, bonus);
       score += pins;
 
@@ -43,7 +43,7 @@ inline void addScore(char* shot, int &frame, bool &half, int &bonus, int &score)
       break;
     }
     default: {
-      pins = *shot - '0';
+      pins = game[roll] - '0';
       useBonus(pins, bonus);
       score += pins;
 
@@ -70,11 +70,9 @@ int main() {
     bool half = false;
     int len = line.size();
     int score = 0, frame = 1, bonus = 0;
-    char* shot = &(line[0]);
-    char* end = &(line[len - 1]);
-    while (shot <= end) {
-      addScore(shot, frame, half, bonus, score);
-      shot += 2;
+    
+    for (int roll = 0; roll < len; roll += 2) {
+      addScore(line, roll, frame, half, bonus, score);
     }
     cout << score << endl;
   }
