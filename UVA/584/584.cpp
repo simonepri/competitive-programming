@@ -8,47 +8,73 @@
 
 #include <iostream>
 
-#include <algorithm>
-
 using namespace std;
 
-int getScore(string &game, int &roll) {
-  if (game[roll] == 'X') {
-    int pins = 10;
-    if (game[roll + 4] == '/') pins += 10;
-    else {
-      pins += game[roll + 2] == 'X' ? 10 : (game[roll + 2] - '0');
-      pins += game[roll + 4] == 'X' ? 10 : (game[roll + 4] - '0');
+inline void useBonus(int &pins, int &bonus) {
+  if (bonus >= 3) {
+    pins *= 3;
+    bonus -= 2;
+  } else if (bonus > 0) {
+    pins *= 2;
+    bonus--;
+  }
+}
+
+inline void addScore(char* shot, int &frame, bool &half, int &bonus, int &score) {
+  int pins;
+  switch (*shot) {
+    case 'X': {
+      pins = 10;
+      useBonus(pins, bonus);
+      score += pins;
+
+      if (frame < 10) bonus += 2;
+      frame++;
+      break;
     }
-    roll += 2;
-    return pins;
+    case '/': {
+      pins = 10 - (*(shot - 2) - '0');
+      useBonus(pins, bonus);
+      score += pins;
+
+      if (frame < 10) bonus++;
+      frame++;
+      if (half) half = false;
+      break;
+    }
+    default: {
+      pins = *shot - '0';
+      useBonus(pins, bonus);
+      score += pins;
+
+      if (half) {
+        frame++;
+        half = false;
+      }
+      else {
+        half = true;
+      }
+      break;
+    }
   }
-  if (game[roll + 2] == '/') {
-    int pins = 10;
-    pins += game[roll + 4] == 'X' ? 10 : (game[roll + 4] - '0');
-    roll += 4;
-    return pins;
-  }
-  int pins = (game[roll] - '0') + (game[roll + 2] - '0');
-  roll += 4;
-  return pins;
 }
 
 int main() {
   ios_base::sync_with_stdio(false); // faster I/O
-
 
   while (true) {
     string line;
     getline(cin, line);
     if (line[0] == 'G') break;
 
+    bool half = false;
     int len = line.size();
-    int score = 0;
-
-    int roll = 0;
-    for (int i = 0; i < 10; i++) {
-      score += getScore(line, roll);
+    int score = 0, frame = 1, bonus = 0;
+    char* shot = &(line[0]);
+    char* end = &(line[len - 1]);
+    while (shot <= end) {
+      addScore(shot, frame, half, bonus, score);
+      shot += 2;
     }
     cout << score << endl;
   }
