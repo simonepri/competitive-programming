@@ -17,6 +17,12 @@ bool isGreen(const int &cycle, const int &elapsed) {
   return (rem > 0 && rem <= cycle - 5);
 }
 
+int nextGreen(const int &cycle, const int &elapsed) {
+  int rem = elapsed % (cycle * 2);
+  if (rem == 0) return 1;
+  return (cycle * 2) - rem + 1;
+}
+
 string formatSec(int sec) {
   int hours = sec / 3600;
   sec = sec % 3600;
@@ -41,33 +47,30 @@ int main() {
   int tl;
   vector<int> v(128);
   while (true) {
+    int min = 90, max = 10;
     int len = 0;
     while (true) {
       cin >> tl;
       if (tl == 0) break;
       if (v.size() == len) v.resize(len * 2);
       v[len++] = tl;
+      if (tl < min) min = tl;
+      if (tl > max) max = tl;
     }
     if (!len) break;
 
-    int time = 0;
-    int start = 0;
-
-    // Exclude the initial portion while they are all still green.
-    while (true) {
-      time++;
-      bool green = true;
-      for (int i = 0; i < len; i++) {
-        if (isGreen(v[i], time)) continue;
-        green = false;
-        break;
-      }
-      if (!green) break;
-    }
+    // Exclude the initial portion while they are all green.
+    int time = min;
 
     // Find an instant at witch they are all green again.
     while (time <= 5 * 60 * 60 + 1) {
       time++;
+      if (!isGreen(max, time)) {
+        time += nextGreen(max, time);
+      }
+      if (!isGreen(min, time)) {
+        time += nextGreen(min, time);
+      }
       bool green = true;
       for (int i = 0; i < len; i++) {
         if (isGreen(v[i], time)) continue;
