@@ -36,7 +36,7 @@ bool compute(int rem, int size) {
     if (nums[i] > rem) continue; // We will overflow
     if (size > 0 && nums[i] > stack[size - 1]) continue; // Select them in decreasing order
     if (i > 0 && !used[i - 1] && nums[i - 1] == nums[i]) continue; // Don't visit the same path twice in the loop
-    
+
     used[i] = true;
     stack[size] = nums[i];
     found = compute(rem - nums[i], size + 1) || found;
@@ -55,14 +55,19 @@ int main() {
     nums.resize(N);
     used.resize(N);
     stack.resize(N);
+    int sum = 0;
     for (int i = 0; i < N; i++) {
       cin >> nums[i];
+      sum += nums[i];
     }
     // This allows us to simplify the recursion.
     sort(nums.begin(), nums.end(), std::greater<int>());
 
+    // Never start the recursion if we already know that this is impossible.
+    bool foundable = nums[0] <= T && sum >= T;
+
     cout << "Sums of " << T << ":" << endl;
-    bool found = compute(T, 0);
+    bool found = (foundable && compute(T, 0));
     if (!found) {
       cout << "NONE" << endl;
     }
