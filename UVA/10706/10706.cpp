@@ -22,7 +22,7 @@ string offset;
 vector<int> prv(MAX_K);
 vector<int> len(MAX_K);
 
-// Computes the length of all Sk
+// Computes the length of all Sk.
 void compute_len() {
   len[0] = 0;
   for (int i = 1; i < MAX_K; i++) {
@@ -30,6 +30,8 @@ void compute_len() {
   }
 }
 
+// Computes the start index of each Sk that will be used to do a binary search
+// on the given input index to find.
 void compute_prv() {
   int tot = 0;
   prv[0] = 0;
@@ -39,7 +41,9 @@ void compute_prv() {
   }
 }
 
-// This does not work for big MAX_K (too much memory)
+
+// This generates a string containing the concatenation of numbers from 1 to MAX_K.
+// Does not work for big MAX_K (too much memory).
 void compute_offset() {
   offset.reserve(MAX_K);
   offset = "";
@@ -56,6 +60,7 @@ int main() {
 
   compute_len();
   compute_prv();
+
   compute_offset();
 
   while (T-- > 0) {
