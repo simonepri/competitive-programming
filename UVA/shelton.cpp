@@ -5,7 +5,7 @@
  * @link          (https://github.com/simonepri/competitive-programming)
  * @license       MIT License (https://opensource.org/licenses/MIT)
  */
- 
+
 #include <iostream>
 
 //#include <string>
@@ -24,9 +24,9 @@ using namespace std;
 
 int main() {
   ios_base::sync_with_stdio(false); // faster I/O
-  
+
   //in >> N;
   //out << N;
-  
+
   return 0;
 }
